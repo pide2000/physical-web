@@ -13,6 +13,9 @@
   "author": "velo@punkt.de",
   "license": "MIT",
   "dependencies": {
+    "mongodb":"~2.0.0",
+    "async": "~0.2.9",
+    "express":"4.x",
     "noble": "^1.0.2",
     "open": "0.0.5"
   }
