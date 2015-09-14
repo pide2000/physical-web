@@ -46,6 +46,7 @@ var server = app.listen(3000, function () {
 //disable noble when ble is disabled
 noble.on('stateChange', function(state) {
   if (state === 'poweredOn') {
+    //delte feaa false to true
     noble.startScanning(['feaa'],false);
   } else {
     noble.stopScanning();
@@ -92,7 +93,7 @@ function checkBeaconData(){
 
   setInterval(function() {
     for(var id in discoveredBeacons) {
-      getPeripheralJson(discoveredBeacons[id]);
+      updatePeripherialData(discoveredBeacons[id]);
     }
   }, CHECK_BKN_DATA_INTERVAL);
 
@@ -100,7 +101,7 @@ function checkBeaconData(){
 
 
 
-function getPeripheralJson(peripherial){
+function updatePeripherialData(peripherial){
 
   advertisement = peripherial.advertisement;
   serviceData = advertisement.serviceData;
