@@ -13,7 +13,6 @@ var discoveredBeacons = [];
 var running = false;
 
 
-
 //return a list of all discovered beacons
 app.get('/beaconList', function (req, res) {
 
@@ -28,7 +27,7 @@ app.get('/beaconInformation', function (req, res) {
   // create the JSON object
   jsonObject = '{"sender":'+ JSON.stringify(discoveredData[req.query.id].url) +',"receiver":"12345","action":1,"firstSeenTime":'+ discoveredData[req.query.id].firstSeen+'}';
 
-  doPostCall(jsonObject);
+  //doPostCall(jsonObject);
   res.send(discoveredData[req.query.id]);
 
 });
