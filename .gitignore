@@ -1,7 +1,10 @@
 # Logs
 logs
 *.log
+<<<<<<< HEAD
 npm-debug.log*
+=======
+>>>>>>> 3f397803c8244e01d59c8924e298dc6c041b57e8
 
 # Runtime data
 pids
